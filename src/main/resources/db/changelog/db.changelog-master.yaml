@@ -1,0 +1,25 @@
+databaseChangeLog:
+  - changeSet:
+      id: 1
+      author: aleksei-novikov
+      changes:
+        - createTable:
+            tableName: timestamp
+            columns:
+              - column:
+                  name: id
+                  type: bigint
+                  autoIncrement: true
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+              - column:
+                  name: label
+                  type: varchar(36)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: time_mark
+                  type: timestamp
+                  constraints:
+                    nullable: false
