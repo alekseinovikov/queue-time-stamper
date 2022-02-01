@@ -26,4 +26,4 @@ jobs:
       - name: Make gradlew executable
         run: chmod +x ./gradlew
       - name: Build
-        run: ./gradlew clean build --parallel
+        run: ./gradlew clean build
