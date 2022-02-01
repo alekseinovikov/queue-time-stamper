@@ -32,6 +32,7 @@ tasks.named('test') {
     useJUnitPlatform()
 }
 
+jib.from.image = "openjdk:17-alpine"
 jib.to.auth.username = System.getenv("DOCKER_HUB_USER_NAME") ?: ""
 jib.to.auth.password = System.getenv("DOCKER_HUB_PASSWORD") ?: ""
 jib.to.tags = [System.getenv("TAG_NAME") ?: "latest"]
